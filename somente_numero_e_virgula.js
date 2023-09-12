@@ -1,5 +1,5 @@
 // funcão em jQuery para deixar somente numeros e virgulas em um input 
-$('.myClass').on('input', function () {
+$('.so_n_e_virgula').on('input', function () {
     $(this).val(function (_, currentValue) {
       
       var newValue = currentValue.replace(/,/g, function (match, offset, input) {
