@@ -1,0 +1,19 @@
+<script>
+function convertDateFormat(inputDate) {
+  // Split the input date string into day, month, and year components
+  const dateComponents = inputDate.split('/');
+
+  // Create a new Date object using the components in the 'MM/DD/YYYY' format
+  const originalDate = new Date(`${dateComponents[1]}/${dateComponents[0]}/${dateComponents[2]}`);
+
+  // Extract the year, month, and day components from the Date object
+  const year = originalDate.getFullYear();
+  const month = String(originalDate.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+  const day = String(originalDate.getDate()).padStart(2, '0');
+
+  // Assemble the result in the 'YYYY-MM-DD' format
+  const result = `${year}-${month}-${day}`;
+
+  return result;
+}
+</script>
