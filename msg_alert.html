@@ -1,0 +1,29 @@
+<div id="centeredDiv">
+    <p></p>
+</div>
+<style>
+    #centeredDiv {
+      position: fixed;
+      background-color: rgba(245, 245, 245, 0.5);
+      padding: 20px;
+      text-align: center;
+      display: none;
+      font-size: x-large;
+      font-weight: bolder;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      z-index: 9999999;
+    }
+</style>
+<script>
+      function mostra_mensagem(){
+      var centeredDiv = document.getElementById('centeredDiv');
+      centeredDiv.style.display = 'flex'
+      setTimeout(function () {
+        centeredDiv.style.display = 'none'
+      }, 1000);
+    }
+</script>
