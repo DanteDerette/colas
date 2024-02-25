@@ -19,9 +19,10 @@
     }
 </style>
 <script>
-      function mostra_mensagem(){
+    function mostra_mensagem(msg){
       var centeredDiv = document.getElementById('centeredDiv');
       centeredDiv.style.display = 'flex'
+      centeredDiv.innerHTML = msg
       setTimeout(function () {
         centeredDiv.style.display = 'none'
       }, 1000);
