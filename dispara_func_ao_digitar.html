@@ -1,0 +1,19 @@
+<script>
+    var typingTimer; 
+    var doneTypingInterval = 1000; // Contagem definida em 1 segundo
+    var $input = $("#elemento");
+
+    // Começa Contagem
+    $input.on("keyup", function () {
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(doneTyping, doneTypingInterval);
+    });
+
+    // Zera a Contagem
+    $input.on("keydown", function () {
+      clearTimeout(typingTimer);
+    });
+    function doneTyping() {
+      // Trigger
+    }
+</script>
