@@ -12,4 +12,16 @@
       crossorigin="anonymous" ></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <title>Nome do Projeto</title>
+    <script>
+      const mascaraMoeda = (event) => {
+        const onlyDigits = event.value
+          .split("")
+          .filter((s) => /\d/.test(s))
+          .join("")
+          .padStart(3, "0");
+        const digitsFloat = onlyDigits.slice(0, -2) + "." + onlyDigits.slice(-2);
+        event.value = maskCurrency(digitsFloat);
+      };
+    </script>
   </head>
+
